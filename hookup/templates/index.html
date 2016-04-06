@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="testboxlogin">
+  <h1>Login</h1>
+  <form method="Post"action="/">
+  	<label id="icon" for="username"><i class="icon-user"></i></label>
+  <input type="text" name="username" id="username" placeholder="Username" required/>
+  <label id="icon" for="name"><i class="icon-shield"></i></label>
+  <input type="password" name="password" id="password" placeholder="Password" required/>
+  	<input type="submit"  name="submit" value="Login"/>
+  	
+  </form>
+  </div>
+<div class="testbox">
+	<h1>Registration</h1>
+  <form  method="Post" action="/">
+
+  <label id="icon" for="name"><i class="icon-envelope "></i></label>
+  <input type="text" name="name" id="name" placeholder="Email" required/>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+  <input type="text" name="username" id="Username" placeholder="Username" required/>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+  <input type='text' id='age' name='age' placeholder='Age' required>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+    <input type='text' id='zipcode' name='zipcode' placeholder='zipcode' required>
+    
+    <label id="icon" for="name"><i class="icon-shield"></i></label>
+  <input type="password" name="password" id="password" placeholder="Password" required/>
+  <div class="gender">
+    <input type="radio" value="None" id="male" name="gender" checked/>
+    <label for="male" class="radio" chec>Male</label>
+    <input type="radio" value="None" id="female" name="gender" />
+    <label for="female" class="radio">Female</label>
+   </div> 
+   <input type="submit" name"register" value=" Register"/>
+   
+  </form>
+</div>
+{% endblock %}
