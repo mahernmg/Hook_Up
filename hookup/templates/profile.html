@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="testboxhomeprofile">
+    <br><br><br><br>
+    {% for r in res %}
+    {% if r[6] == 'male' %}
+    <img src="static/images/male.jpg" width="112.5" height="112.5"></img>
+    {% endif %}
+    
+    {% if r[6]=='female' %}
+    <img src="static/images/female.png" width="112.5" height="112.5"></img>
+    {% endif %}
+    <br><br><br>
+    <form>
+        <label for="">Username: </label> 
+        <input type="text" value="{{r[1]}}" disabled="disabled"/><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="">Email:</label>
+        <input type="text" value="{{r[3]}}" disabled="disabled"/><br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="">Age:</label>
+        <input type="text" value="{{r[4]}}" disabled="disabled"/><br>
+        
+        &nbsp;&nbsp;<label for="">Zipcode:</label> 
+        <input type="text" value="{{r[5]}}" disabled="disabled"/><br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;<label for="">Sex:</label>
+        <input type="text" value="{{r[6]}}" disabled="disabled"/><br>
+
+        
+        
+    
+    
+     
+     
+    
+     
+     
+    </form>
+     
+    {% endfor %}
+    
+  
+</div><!-- /wrap -->
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

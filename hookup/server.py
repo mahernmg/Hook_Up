@@ -58,6 +58,17 @@ def mainIndex():
     return render_template('index.html')
 
 
+
+@app.route('/profile', methods=['GET', 'POST'])
+def profile():
+    conn=connectToDB()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    if 'username' in session:
+        query = "select * from users WHERE username = '%s'" % (session['username'])
+        cur.execute(query)
+        res=cur.fetchall()
+        return render_template('profile.html',res=res)
+
 @app.route('/logout')
 def logout():
     session.pop('username', None)
@@ -69,7 +80,7 @@ app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 @app.route('/HomePage')
 def homePage():
     if "username" in session:
-        return render_template('login.html')
+        return render_template('home.html')
     return render_template('index.html')
         
 
